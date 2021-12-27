@@ -13,7 +13,7 @@
                 <tr>
                     <th>No</th>
                     <th>Name</th>
-                    <th>Category</th>
+                    {{-- <th>Category</th> --}}
                     <th>Action</th>
                 </tr>
             </thead>
@@ -22,7 +22,7 @@
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $category_sub->name }}</td>
-                    <td>{{ $category_sub->category->name }}</td>
+                    {{-- <td>{{ $category_sub->category->name }}</td> --}}
                     <td>
                         <a href="{{ route('category_subs.show', $category_sub->id) }}"
                             class="btn btn-sm btn-info">Detail</a>

@@ -10,19 +10,11 @@
             @csrf
             <div class="row mb-4">
                 <div class="col-md-2">
-                    <label for="name" class="form-label">Name</label>
-                </div>
-                <div class="col-md-6">
-                    <input type="text" class="form-control" name="name" id="name">
-                </div>
-            </div>
-            <div class="row mb-4">
-                <div class="col-md-2">
                     <label for="category_id" class="form-label">Category</label>
                 </div>
                 <div class="col-md-6">
-                    <select name="category_id" id="category_id" class="form-select">
-                        <option value="" selected disabled>-Choose Category-</option>
+                    <select name="category_id" id="category" class="form-select">
+                        <option value="" selected disabled hidden>-Choose Category-</option>
                         @foreach ($categories as $category)
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                         @endforeach
@@ -31,15 +23,19 @@
             </div>
             <div class="row mb-4">
                 <div class="col-md-2">
-                    <label for="category_sub_id" class="form-label">Category Sub</label>
+                    <label for="category_sub" class="form-label">Category Sub</label>
                 </div>
                 <div class="col-md-6">
-                    <select name="category_sub_id" id="category_sub_id" class="form-select">
-                        <option value="" selected disabled>-Choose Category-</option>
-                        @foreach ($category_subs as $category_sub)
-                        <option value="{{ $category_sub->id }}">{{ $category_sub->name }}</option>
-                        @endforeach
+                    <select name="category_sub_id" id="category_sub" class="form-select">
                     </select>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-2">
+                    <label for="name" class="form-label">Name</label>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" name="name" id="name">
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>

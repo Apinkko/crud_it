@@ -19,8 +19,8 @@
             <div class="col-md-2">
                 <label for="name" class="form-label">Category</label>
             </div>
-            <div class="col-md-6">
-                <input type="text" class="form-control" name="name" id="name"
+            <div class="col-md-6 mb-3">
+                <input type="text" class="form-control mb-4" name="name" id="name"
                     value="{{ $category_sub->category->name }}" disabled>
             </div>
         </div>

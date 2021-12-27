@@ -18,7 +18,7 @@
         </div>
         <div class="row mb-4">
             <div class="col-md-2">
-                <label for="name" class="form-label">Category</label>
+                <label for="name" class="form-label">Category Sub</label>
             </div>
             <div class="col-md-6">
                 @foreach ($category->category_subs as $sub)

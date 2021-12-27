@@ -6,7 +6,8 @@ use App\Models\CategorySub;
 use App\Http\Requests\StoreCategorySubRequest;
 use App\Http\Requests\UpdateCategorySubRequest;
 use App\Models\Category;
-use GuzzleHttp\Promise\Create;
+use App\Models\Product;
+
 
 class CategorySubController extends Controller
 {
@@ -57,7 +58,7 @@ class CategorySubController extends Controller
      */
     public function show(CategorySub $category_sub)
     {
-        // dd($category_sub->category());
+        // dd($category_sub->products());
         return view('category_subs.show', compact('category_sub'));
     }
 
@@ -71,7 +72,7 @@ class CategorySubController extends Controller
     {
         $categories = Category::all();
 
-        return view('category_subs.edit', compact('categories', 'category_sub'));
+        return view('category_subs.edit', compact('category_sub', 'categories'));
     }
 
     /**

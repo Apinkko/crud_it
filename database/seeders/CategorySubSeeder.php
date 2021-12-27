@@ -24,11 +24,11 @@ class CategorySubSeeder extends Seeder
         ]);
         CategorySub::query()->create([
             'category_id' => 2,
-            'name' => 'Ms. Office'
+            'name' => 'Adobe'
         ]);
         CategorySub::query()->create([
             'category_id' => 2,
-            'name' => 'Ms. 362'
+            'name' => 'MS. Office'
         ]);
     }
 }
